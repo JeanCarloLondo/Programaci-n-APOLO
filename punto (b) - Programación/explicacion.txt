@@ -1,0 +1,33 @@
+Nota: Puedes usar el comando make para compilar ambos .cpp y luego usar make run para distinguir los resultados y tiempos de ejecución de 
+cada uno.
+
+Problema: La llamadas recursivas a una función requieren más tiempo de ejecución que un simple ciclo.
+
+Solución
+
+Optimización de recursión de cola (tail recursion): La implementación de funciones con recursión
+de cola se realiza eficientemente por el compilador
+
+Definición
+Una función con recursión de cola (tail recursion) es una función recursiva en donde la
+última operación es la llamada recursiva a la función.
+
+
+Recursión de Cola: La optimización de recursión de cola puede transformar las llamadas recursivas en iteraciones, 
+eliminando la necesidad de mantener un marco de pila adicional para cada llamada. Esto reduce el uso de memoria y 
+puede mejorar el rendimiento al evitar el desbordamiento de pila para valores grandes de n.
+
+Recursión Simple: En la recursión simple, cada llamada recursiva agrega un nuevo marco de pila, lo que puede llevar a un uso elevado
+ de memoria y un mayor riesgo de desbordamiento de pila para valores grandes de n.
+
+ ¿Por qué funciona mejor la recursión de cola?
+La recursión de cola funciona mejor porque permite al compilador realizar optimizaciones que transforman las llamadas 
+recursivas en bucles iterativos. Esto significa que el compilador puede reutilizar el mismo marco de pila en lugar de crear uno 
+nuevo para cada llamada recursiva. Esto reduce el uso de memoria y hace que la función sea más eficiente en términos de espacio. 
+Además, al eliminar el sobrecosto de la creación y destrucción de marcos de pila, la recursión de cola puede ser más rápida en la
+ ejecución.
+
+ FUENTES:
+
+ http://www1.eafit.edu.co/asr/cursos/st0244-lenguajes-de-programacion/diapositivas/pf.pdf
+ https://www.campusmvp.es/recursos/post/Recursividad-de-cola-tail-recursion.aspx

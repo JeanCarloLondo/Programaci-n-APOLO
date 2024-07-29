@@ -1,0 +1,23 @@
+Este programa en C++ se encarga de ejecutar otro programa o comando que le indiques. Primero, cuando inicias el programa, 
+le pasas el nombre del programa o comando que deseas ejecutar. Luego, el programa usa una función llamada std::system() 
+para lanzar el comando o ejecutar el programa que le has proporcionado. Después de lanzar el comando, el programa espera un 
+breve periodo de tiempo para darle al comando suficiente tiempo para completarse. Una vez que el comando ha terminado de ejecutarse, 
+el programa muestra en la pantalla si el comando se ejecutó correctamente o si hubo algún error durante la ejecución. 
+
+el programa utiliza la función std::system() para ejecutar el comando o programa especificado. 
+Esta función envía el comando al sistema operativo para que lo ejecute. El comando se pasa como una cadena de texto, 
+y std::system() maneja la ejecución del comando en el entorno del sistema operativo.
+
+A continuación, el programa espera a que el comando se complete. Aunque std::system() ya maneja la espera implícitamente,
+ se añade una pausa breve con std::this_thread::sleep_for() para asegurar que el proceso tenga suficiente tiempo para finalizar, 
+ especialmente en sistemas donde el tiempo de ejecución puede variar.
+
+ inalmente, el programa verifica el código de salida del comando para determinar si la ejecución fue exitosa. 
+ El código de salida es un número que el sistema operativo devuelve para indicar el estado del proceso. Un código de salida 
+ de 0 generalmente indica éxito, mientras que cualquier otro valor puede señalar un error.
+
+ FUENTES:
+ https://www.programacionenc.net/index.php?option=com_content&view=article&id=137:hacer-un-programa-que-reciba-
+ parametros-desde-la-linea-de-comandos-&catid=31:general&Itemid=41
+
+ https://learn.microsoft.com/es-es/cpp/c-language/main-function-and-program-execution?view=msvc-170
